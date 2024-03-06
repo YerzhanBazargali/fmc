@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1619602121858394"
+     crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-23YP55ZMRK"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23YP55ZMRK');
+</script>
+    <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Калькулятор итоговых оценок</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="300" />
+  <meta property="twitter:description" content="" />
+  <link rel="image_src" href="" />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:100,200,300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <title>My One-Page Website</title>
+  <style>
+    /* Add some style to the website */
+    html, body {
+        scroll-behavior: smooth;
+        
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        
+      }
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+    html {
+          width: 100%;
+      }
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: sans-serif;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+    div {
+        width: 100%;
+      }
+    .bg {
+        width: 100%;
+    .marks {
+        font-size: 24px;
+    }
+    }
+    .fulls{
+        width: 100%;
+    }
+
+
+    #line{
+        color: white;
+    }
+    .input-text{
+        width: 100px;
+    }
+    .final-table{
+        
+        text-align: center;
+        
+    }
+    .rowName::after {
+        content: attr(data-title);
+    }
+
+    .rowName:hover::after { 
+        content: attr(data-title); 
+}
+  </style>
+</head>
+<body align="center">
+  <div class="bg">
+  <div align="center">
+      <h3>Калькулятор итоговых оценок</h3>
+    <table class="marks">
+        <tbody>
+            <tr><td colspan="2">Десяток (10):</td><td><input class="input-text" id="10" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+            <tr><td colspan="2">Девяток (9):</td><td><input class="input-text" id="9" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+            <tr><td colspan="2">Восьмерок (8):</td><td><input class="input-text" id="8" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+            <tr><td colspan="2">Семерок (7):</td><td><input class="input-text" id="7" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+            <tr><td colspan="2">Шестёрок (6):</td><td><input class="input-text" id="6" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+		    <tr><td colspan="2">Пятёрок (5):</td><td><input class="input-text" id="5" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+		    <tr><td colspan="2">Четвёрок (4):</td><td><input class="input-text" id="4" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+		    <tr><td colspan="2">Троек (3):</td><td><input class="input-text" id="3" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+		    <tr><td colspan="2">Двоек (2):</td><td><input class="input-text" id="2" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+            <tr><td colspan="2">Единиц (1):</td><td><input class="input-text" id="1" type="number" min="1" max="100" value="" placeholder="Кол-во"></td></tr>
+			<tr id="line" bordercolor="red"><td id="line" colspan="2" >0</td></tr>
+            
+            <tr>
+                <td class="rowName" title="Суммативное оценивание за раздел">СОР1</td>
+                <td><input class="SO" id="max-sor-1" size="5px" type="number" min="1" max="100" value="" placeholder="Макс" disabled></td>
+                <td><input class="input-text" id="sor-1-val" type="number" min="1" max="100" value="" placeholder="Кол-во баллов" disabled></td></tr>
+            <tr>
+                <td>СОР2</td>
+                <td><input class="SO" id="max-sor-2" size="5px" type="number" min="1" max="100" value="" placeholder="Макс" disabled></td>
+                <td><input class="input-text" id="sor-2-val" type="number" min="1" max="100" value="" placeholder="Кол-во баллов" disabled></td></tr>
+            <tr>
+                <td>СОР3</td>
+                <td><input class="SO" id="max-sor-3" size="5px" type="number" min="1" max="100" value="" placeholder="Макс" disabled></td>
+                <td><input class="input-text" id="sor-3-val" type="number" min="1" max="100" value="" placeholder="Кол-во баллов" disabled></td></tr>
+            <tr>
+                <td>СОР4</td>
+                <td><input class="SO" id="max-sor-4" size="5px" type="number" min="1" max="100" value="" placeholder="Макс" disabled></td>
+                <td><input class="input-text" id="sor-4-val" type="number" min="1" max="100" value="" placeholder="Кол-во баллов" disabled></td></tr>
+            <tr>
+                <td>СОЧ</td>
+                <td><input class="SO" id="max-soch" size="5px" type="number" min="1" max="100" value="" placeholder="Макс" disabled></td>
+                <td><input class="input-text" id="soch-val" type="number" min="1" max="100" value="" placeholder="Кол-во баллов" disabled=""></td></tr>
+			</tbody></table>
+    </div>
+    
+   <hr width=100%>
+    
+    <div align="center" class="final-table" >
+        <table border=1 align="center">
+            <tbody>
+                <tr><th>% (ФО+СОР)</th><th>% СОЧ</th><th>% СУММА</th><th>ОЦЕНКА</th></tr>
+                <tr><td id="FOplusSO">0</td><td id="sochPercent">0</td><td id="summary">0</td><td id="mark">0</td></tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <script>
+    // Add some interactivity to the website
+    var input = document.body.children[0];
+      
+    input.oninput = function()  {inputActivator(); ResultUpdate();}
+
+    //////////////////////////////
+    function checkFoInputs() {
+        let elements = document.querySelectorAll('input');
+        var result = false;
+        for (let elem of elements) {
+            if (elem.value >= 1 && elem.value <= 100 && elem.value != ""){result = true;}
+        }
+        if (result == false){
+            for (let elem of elements){elem.value = "";}
+        }
+        
+
+        return result;
+    }
+      
+    function inputActivator() {
+        var SO1 = document.getElementById("max-sor-1");
+        var SO2 = document.getElementById("max-sor-2");
+        var SO3 = document.getElementById("max-sor-3");
+        var SO4 = document.getElementById("max-sor-4");
+        var SOCH = document.getElementById("max-soch");
+        
+        if (checkFoInputs()){SO1.removeAttribute("disabled")} else {SO1.value = "";SO1.setAttribute('disabled', '');}
+        if (SO1.value != ""){SO2.removeAttribute("disabled")} else {SO2.value = "";SO2.setAttribute('disabled', '');}
+        if (SO2.value != ""){SO3.removeAttribute("disabled")} else {SO3.value = "";SO3.setAttribute('disabled', '');}
+        if (SO3.value != ""){SO4.removeAttribute("disabled")} else {SO4.value = "";SO4.setAttribute('disabled', '');}
+        if (SO1.value != ""){SOCH.removeAttribute("disabled")} else {SOCH.value = "";SOCH.setAttribute('disabled', '');}
+    }
+      
+    function ResultUpdate(){
+        
+        function calcMark(num){
+            mark = 0;
+            if (num >= 0 && num < 39.5){mark=2;}
+            else if (num > 39.49 && num < 64.5){mark=3;}
+            else if (num > 64.49 && num < 84.5){mark=4;}
+            else if (num > 84.49 && num <= 100){mark=5;}
+            return mark;
+        }
+
+        ///////////////////////////////
+        function polugodie(sumOfMarks, sumOfSO, quantityOfMarks, SumOfMaxSO, perc) {
+            var otv = ((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * perc;  
+            return otv.toFixed(2);
+            }
+        
+        ///////////////////////////////
+        function isNumber(char) {
+            if ( char >= "1" && char <= "9" ) { return true; alert("Yesp");}
+            else{return false; alert("Nope");}
+            }
+        
+        ///////////////////////////////
+        function rewrite(id) {
+            var temp = document.getElementById(id);
+            temp.innerHTML = "1";
+            return false;
+        }
+        
+        ///////////////////////////////
+        function chetvertnoy(sumOfMarks, sumOfSO, quantityOfMarks, SumOfMaxSO) {
+            var otv = ((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * 50;  
+            return otv.toFixed(2);
+            }
+        
+        ///////////////////////////////
+        function SumOfMarks(){
+            var mark_summary = 0;
+            var mark_quantity = 0;
+
+            for (let index = 1; index <= 10; index++) {
+                var Value = document.getElementById(index).value;
+
+                
+                    mark_summary += Number(document.getElementById(index.toString()).value) * index;
+                    mark_quantity += Number(document.getElementById(index.toString()).value);
+
+            };
+            return [mark_summary, mark_quantity]
+        }
+
+        /////////////////////////////////////////
+        function SumOfSO(){
+            var sor_summary = 0;
+            var sor_max_summary = 0;
+
+            for (let index = 1; index <= 4; index++) {
+                var maxSOelem = document.getElementById("max-sor-{index}".replace("{index}", index));
+                var SOelem = document.getElementById('sor-{index}-val'.replace('{index}', index));
+                if (["", "-", "+", "0"].includes(maxSOelem.value)){maxSOelem.value = "";SOelem.value = ""; SOelem.setAttribute('disabled', '');}
+                else if (maxSOelem.value == ""){SOelem.value = ""; SOelem.setAttribute('disabled', '');}
+                else if (maxSOelem.value != ""){SOelem.removeAttribute('disabled');}
+                if (Number(SOelem.value) > Number(maxSOelem.value)){SOelem.value = "";}
+                sor_summary += Number(SOelem.value);
+                sor_max_summary += Number(maxSOelem.value);
+            };
+            return [sor_summary, sor_max_summary];
+        }
+        
+        /////////////////////////////////////////
+        var FOplusSO = document.getElementById("FOplusSO");
+        var sochPercent = document.getElementById("sochPercent");
+        var summary = document.getElementById("summary");
+        var mark = document.getElementById("mark");
+
+        var maxSoch = document.getElementById("max-soch");
+        
+
+        if (["", "-", "+", "0"].includes(maxSoch.value)){
+            maxSoch.value = "";
+            var res = polugodie(SumOfMarks()[0], SumOfSO()[0], SumOfMarks()[1], SumOfSO()[1], 100);
+            document.getElementById('soch-val').value = "";
+            document.getElementById('soch-val').setAttribute('disabled', '');
+            FOplusSO.innerHTML = Number(res).toFixed(2);
+            sochPercent.innerHTML = "";
+            summary.innerHTML = Number(res).toFixed(2);
+            mark.innerHTML = calcMark(res);
+            
+        }
+        
+      
+        else if (maxSoch.value != ""){
+            var SOCHvalueElem = document.getElementById('soch-val');
+            if (SOCHvalueElem.value > Number(maxSoch.value)){SOCHvalueElem.value = "";}
+            var res = polugodie(SumOfMarks()[0], SumOfSO()[0], SumOfMarks()[1], SumOfSO()[1], 50);
+            var sochPercentValue = (Number(document.getElementById("soch-val").value / Number(document.getElementById("max-soch").value)) * 50).toFixed(2);
+            var markValue = Number(res) + Number(sochPercentValue);
+            SOCHvalueElem.removeAttribute("disabled");
+            
+            FOplusSO.innerHTML = res;
+            sochPercent.innerHTML = sochPercentValue;
+            summary.innerHTML = markValue.toFixed(2);
+            mark.innerHTML = calcMark(markValue);            
+        
+        }
+        
+    }
+    
+      window.onload = function() {  
+      //  inputActivator();; 
+     
+      }
+
+  </script>
+    <div id="disqus_thread" style="padding: 5% 5% 5% 5%;"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-finalmarkcalculator-ierzhanbazargha-repl-co.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//https-finalmarkcalculator-ierzhanbazargha-repl-co.disqus.com/count.js" async></script>
+
+    <script src="https://apis.google.com/js/plusone.js">
+</script>
+<div class="g-comments"
+    data-href = window.location
+    data-width = "650"
+    data-first_party_property = "BLOGGER"
+    data-view_type = "FILTERED_POSTMOD">
+</div>
+    
+</body>
+</html>
