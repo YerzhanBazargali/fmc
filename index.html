@@ -409,16 +409,10 @@
                   console.error('Error loading translations:', error);
               });
     }
-    function getCookie(name) {
-      let cookie = document.cookie.split('; ').find(row => row.startsWith(name + '='));
-      console.log(cookie ? cookie.split('=')[1] : 'kk');
-      return cookie ? cookie.split('=')[1] : 'kk';
-    }
     function changeLanguage(lang){
         var langAtrr = document.getElementsByTagName('html')[0];
         langAtrr.setAttribute('lang',lang);
-        document.cookie = "lang=" + lang;
-        //alert(document.cookie);
+        localStorage.setItem('lang', lang);
         langUpdate();
     }
     
