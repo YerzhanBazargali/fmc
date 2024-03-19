@@ -387,10 +387,41 @@
 	<label class="btn" for="top-box"></label>
 		<div class="top-panel">
    			<div class="message">
-       				Здесь размещаете любое содержание.....
+       				<button onclick="changeLanguage('kk')">ҚАЗАҚША</button>
+           			<button onclick="changeLanguage('ru')">РУССКИЙ</button>
   			</div>
 		</div>
  <script src="script.js"></script>   
+<script>
+    function langUpdate(){
+        var lang = document.getElementsByTagName('html')[0].getAttribute('lang');
+          fetch('translations/' + lang + '.json')
+              .then(response => response.json())
+              .then(data => {
+                  document.querySelectorAll('[data-translate]').forEach(element => {
+                      var key = element.getAttribute('data-translate');
+                      if (data[key]) {
+                          element.textContent = data[key];
+                      }
+                  });
+              })
+              .catch(error => {
+                  console.error('Error loading translations:', error);
+              });
+    }
+    function getCookie(name) {
+      let cookie = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+      return cookie ? cookie.split('=')[1] : 'kk';
+    }
+    function changeLanguage(lang){
+        var langAtrr = document.getElementsByTagName('html')[0];
+        langAtrr.setAttribute('lang',lang);
+        document.cookie = "lang=" + lang;
+        //alert(document.cookie);
+        langUpdate();
+    }
+    
+</script>
 	
 </body>
 </html>
