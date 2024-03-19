@@ -176,7 +176,9 @@
         let elements = document.querySelectorAll('input');
         var result = false;
         for (let elem of elements) {
-            if (elem.value >= 1 && elem.value <= 100 && elem.value != ""){result = true;}
+	    if (elem.value <= 0 && elem.value != ""){elem.value = Math.abs(elem.value);};
+            if (elem.value >= 1 && elem.value <= 100 && elem.value != ""){result = true;};
+	    
         }
         if (result == false){
             for (let elem of elements){elem.value = "";}
