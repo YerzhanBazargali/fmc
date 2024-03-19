@@ -411,6 +411,7 @@
     }
     function getCookie(name) {
       let cookie = document.cookie.split('; ').find(row => row.startsWith(name + '='));
+      console.log(cookie ? cookie.split('=')[1] : 'kk');
       return cookie ? cookie.split('=')[1] : 'kk';
     }
     function changeLanguage(lang){
