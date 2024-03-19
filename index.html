@@ -256,7 +256,7 @@
                 if (["", "-", "+", "0"].includes(maxSOelem.value)){maxSOelem.value = "";SOelem.value = ""; SOelem.setAttribute('disabled', '');}
                 else if (maxSOelem.value == ""){SOelem.value = ""; SOelem.setAttribute('disabled', '');}
                 else if (maxSOelem.value != ""){SOelem.removeAttribute('disabled');}
-                if (Number(SOelem.value) > Number(maxSOelem.value)){SOelem.value = "";}
+                if (Number(SOelem.value) > Number(maxSOelem.value)){SOelem.value = maxSOelem.value;}
                 sor_summary += Number(SOelem.value);
                 sor_max_summary += Number(maxSOelem.value);
             };
