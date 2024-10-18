@@ -265,7 +265,9 @@
             element.classList.add('low');
         } else if (value >= 40 && value < 65) {
             element.classList.add('medium');
-        } else {
+        } else if (value >= 65 && value < 85) {
+            element.classList.add('hm');
+        }else {
             element.classList.add('high');
         }
     }
