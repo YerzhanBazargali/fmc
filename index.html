@@ -261,16 +261,16 @@
     const mark = parseInt(document.getElementById('mark').textContent);
 
     function applyColorClass(element, value) {
-        if (value < 40) { element.className('low'); } 
-	else if (value >= 40 && value < 65) { element.className('medium'); } 
-	else if (value >= 65 && value < 85) { element.className('hm'); }
-	else { element.className('high'); }
+        if (value < 40) { element.className = 'low'; } 
+	else if (value >= 40 && value < 65) { element.className = 'medium'; } 
+	else if (value >= 65 && value < 85) { element.className = 'hm'; }
+	else { element.className = 'high'; }
     }
   function markColorClass(element, value) {
-        if (value == 2) { element.className('low'); } 
-	else if (value == 3) { element.className('medium');} 
-	else if (value == 4) { element.className('hm'); } 
-	else { element.className('high'); }
+        if (value == 2) { element.className = 'low'; } 
+	else if (value == 3) { element.className = 'medium';} 
+	else if (value == 4) { element.className = 'hm'; } 
+	else { element.className = 'high'; }
     }
 
     // Применяем стили на основе значений
