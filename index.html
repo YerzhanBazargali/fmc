@@ -261,26 +261,16 @@
     const mark = parseInt(document.getElementById('mark').textContent);
 
     function applyColorClass(element, value) {
-        if (value < 40) {
-            element.classList.add('low');
-        } else if (value >= 40 && value < 65) {
-            element.classList.add('medium');
-        } else if (value >= 65 && value < 85) {
-            element.classList.add('hm');
-        }else {
-            element.classList.add('high');
-        }
+        if (value < 40) { element.classList.add('low'); } 
+	else if (value >= 40 && value < 65) { element.classList.add('medium'); } 
+	else if (value >= 65 && value < 85) { element.classList.add('hm'); }
+	else { element.classList.add('high'); }
     }
   function markColorClass(element, value) {
-        if (value == 2) {
-            element.classList.add('low');
-        } else if (value == 3) {
-            element.classList.add('medium');
-        } else if (value == 4) {
-            element.classList.add('hm');
-        } else {
-            element.classList.add('high');
-        }
+        if (value == 2) { element.classList.add('low'); } 
+	else if (value == 3) { element.classList.add('medium');} 
+	else if (value == 4) { element.classList.add('hm'); } 
+	else { element.classList.add('high'); }
     }
 
     // Применяем стили на основе значений
@@ -288,7 +278,7 @@
     applyColorClass(document.getElementById('sochPercent'), sochPercent);
     applyColorClass(document.getElementById('summary'), summary);
     markColorClass(document.getElementById('mark'), mark);
-};
+}
     ///////////////////////////////////////  
     function inputActivator() {
         var SO1 = document.getElementById("max-sor-1");
