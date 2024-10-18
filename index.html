@@ -311,7 +311,7 @@
         function polugodie(sumOfMarks, sumOfSO, quantityOfMarks, SumOfMaxSO, perc) {
             var otv = Number(((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * perc);
 	    var res = (otv).toFixed(2);
-            return res=="NaN"?'':(res>0?res:'');
+            return res=="NaN"?0:res;
             }
         
         ///////////////////////////////
@@ -331,7 +331,7 @@
         function chetvertnoy(sumOfMarks, sumOfSO, quantityOfMarks, SumOfMaxSO) {
             var otv = Number(((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * 50);
 	    var res = (otv).toFixed(2);
-            return res=="NaN"?'':(res>0?res:'');
+            return res=="NaN"?0:res;
             }
         
         ///////////////////////////////
