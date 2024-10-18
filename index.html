@@ -262,7 +262,7 @@
 
     function applyColorClass(element, value) {
 	if (value == 0) { element.className = 'io'; } 
-        esle if (value > 0 && value < 40) { element.className = 'low'; } 
+        else if (value > 0 && value < 40) { element.className = 'low'; } 
 	else if (value >= 40 && value < 65) { element.className = 'medium'; } 
 	else if (value >= 65 && value < 85) { element.className = 'hm'; }
 	else { element.className = 'high'; }
