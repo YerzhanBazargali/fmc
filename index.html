@@ -142,6 +142,30 @@
     #heading{
 	    padding-top:10px;
     }
+    .io{
+  background:#d3d3d3;
+  border-radius: 7px;
+  padding:5px;
+  text-align:center;
+  font-family: 'TAHOMA';
+}
+.low {
+    background-color: red;
+    color: white;
+}
+
+.medium {
+    background-color: orange;
+    color: black;
+}
+.hm{
+  background-color: #2E8B57;
+    color: white;
+}
+.high {
+    background-color: green;
+    color: white;
+}
   </style>
 </head>
 <body align="center">
@@ -190,8 +214,18 @@
     <div align="center" class="final-table" >
         <table border=1 align="center">
             <tbody>
-                <tr><th data-translate="FOpSOR">% (ФО+СОР)</th><th data-translate="pso4">% СОЧ</th><th data-translate="sum">% СУММА</th><th data-translate="mark">ОЦЕНКА</th></tr>
-                <tr><td id="FOplusSO">0</td><td id="sochPercent">0</td><td id="summary">0</td><td id="mark">0</td></tr>
+                <tr>
+			<th class="io" data-translate="FOpSOR">% (ФО+СОР)</th>
+			<th class="io" data-translate="pso4">% СОЧ</th>
+			<th class="io" data-translate="sum">% СУММА</th>
+			<th class="io" data-translate="mark">ОЦЕНКА</th>
+		</tr>
+                <tr>
+			<td class="io" id="FOplusSO">0</td>
+			<td class="io" id="sochPercent">0</td>
+			<td class="io" id="summary">0</td>
+			<td class="io" id="mark">0</td>
+		</tr>
             </tbody>
         </table>
     </div>
@@ -411,7 +445,39 @@
         localStorage.setItem('lang', lang);
         langUpdate();
     }
-    
+document.addEventListener('DOMContentLoaded', function () {
+    const foPlusSo = parseFloat(document.getElementById('FOplusSO').textContent);
+    const sochPercent = parseFloat(document.getElementById('sochPercent').textContent);
+    const summary = parseFloat(document.getElementById('summary').textContent);
+    const mark = parseInt(document.getElementById('mark').textContent);
+
+    function applyColorClass(element, value) {
+        if (value < 40) {
+            element.classList.add('low');
+        } else if (value >= 40 && value < 65) {
+            element.classList.add('medium');
+        } else {
+            element.classList.add('high');
+        }
+    }
+  function markColorClass(element, value) {
+        if (value < 3) {
+            element.classList.add('low');
+        } else if (value < 4) {
+            element.classList.add('medium');
+        } else if (value < 5) {
+            element.classList.add('hm');
+        } else {
+            element.classList.add('high');
+        }
+    }
+
+    // Применяем стили на основе значений
+    applyColorClass(document.getElementById('FOplusSO'), foPlusSo);
+    applyColorClass(document.getElementById('sochPercent'), sochPercent);
+    applyColorClass(document.getElementById('summary'), summary);
+    markColorClass(document.getElementById('mark'), mark);
+});
 </script>
 	
 </body>
