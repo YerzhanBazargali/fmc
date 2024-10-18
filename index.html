@@ -374,7 +374,37 @@
             mark.innerHTML = calcMark(markValue);            
         
         }
-        
+            const foPlusSo = parseFloat(document.getElementById('FOplusSO').textContent);
+    const sochPercent = parseFloat(document.getElementById('sochPercent').textContent);
+    const summary = parseFloat(document.getElementById('summary').textContent);
+    const mark = parseInt(document.getElementById('mark').textContent);
+
+    function applyColorClass(element, value) {
+        if (value < 40) {
+            element.classList.add('low');
+        } else if (value >= 40 && value < 65) {
+            element.classList.add('medium');
+        } else {
+            element.classList.add('high');
+        }
+    }
+  function markColorClass(element, value) {
+        if (value < 3) {
+            element.classList.add('low');
+        } else if (value < 4) {
+            element.classList.add('medium');
+        } else if (value < 5) {
+            element.classList.add('hm');
+        } else {
+            element.classList.add('high');
+        }
+    }
+
+    // Применяем стили на основе значений
+    applyColorClass(document.getElementById('FOplusSO'), foPlusSo);
+    applyColorClass(document.getElementById('sochPercent'), sochPercent);
+    applyColorClass(document.getElementById('summary'), summary);
+    markColorClass(document.getElementById('mark'), mark);
     }
     
       window.onload = function() {  
@@ -445,39 +475,7 @@
         localStorage.setItem('lang', lang);
         langUpdate();
     }
-document.addEventListener('DOMContentLoaded', function () {
-    const foPlusSo = parseFloat(document.getElementById('FOplusSO').textContent);
-    const sochPercent = parseFloat(document.getElementById('sochPercent').textContent);
-    const summary = parseFloat(document.getElementById('summary').textContent);
-    const mark = parseInt(document.getElementById('mark').textContent);
 
-    function applyColorClass(element, value) {
-        if (value < 40) {
-            element.classList.add('low');
-        } else if (value >= 40 && value < 65) {
-            element.classList.add('medium');
-        } else {
-            element.classList.add('high');
-        }
-    }
-  function markColorClass(element, value) {
-        if (value < 3) {
-            element.classList.add('low');
-        } else if (value < 4) {
-            element.classList.add('medium');
-        } else if (value < 5) {
-            element.classList.add('hm');
-        } else {
-            element.classList.add('high');
-        }
-    }
-
-    // Применяем стили на основе значений
-    applyColorClass(document.getElementById('FOplusSO'), foPlusSo);
-    applyColorClass(document.getElementById('sochPercent'), sochPercent);
-    applyColorClass(document.getElementById('summary'), summary);
-    markColorClass(document.getElementById('mark'), mark);
-});
 </script>
 	
 </body>
