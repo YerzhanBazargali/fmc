@@ -307,7 +307,7 @@
 
         ///////////////////////////////
         function polugodie(sumOfMarks, sumOfSO, quantityOfMarks, SumOfMaxSO, perc) {
-            var otv = ((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * perc;  
+            var otv = Number(((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * perc);  
             return otv.toFixed(2);
             }
         
@@ -326,7 +326,7 @@
         
         ///////////////////////////////
         function chetvertnoy(sumOfMarks, sumOfSO, quantityOfMarks, SumOfMaxSO) {
-            var otv = ((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * 50;  
+            var otv = Number(((sumOfMarks + sumOfSO) / (SumOfMaxSO + quantityOfMarks * 10)) * 50);  
             return otv.toFixed(2);
             }
         
