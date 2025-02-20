@@ -24,6 +24,7 @@ html, body {
 .info a:hover {
     color: #ad8c02
 }
+
 .fa {
     color: #fd6969
 }
@@ -79,13 +80,16 @@ html, body {
 .message h2 {
     color: #888
 }
+
 .message p {
     margin: 1em 0
 }
+
 .message a {
     text-decoration: none;
     color: #748b74
 }
+
 .message a:hover {
     color: #95984b
 }
@@ -123,6 +127,7 @@ label.btn:after {
     font: normal 18px/1 FontAwesome;
     text-decoration: inherit
 }
+
 /* Активация панели */
 .open:checked ~ .top-panel {
     top: 0
